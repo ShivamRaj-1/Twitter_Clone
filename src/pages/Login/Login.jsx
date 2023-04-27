@@ -3,6 +3,7 @@ import { FaApple } from 'react-icons/fa';
 import { FcGoogle, } from "react-icons/fc";
 import TextField from '@mui/material/TextField';
 import Log from './Login.module.css'
+import { Divider } from '@mui/material';
 
 export default function Login() {
   const [Logindata, setLogindata] = useState('');
@@ -10,14 +11,12 @@ export default function Login() {
   const [showdata, setShowdata] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
-    // add relevant code here
+    
   }
-
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('user'));
     setUserList(data);
   }, []);
-
   console.log(userList)
 
   return (
@@ -37,10 +36,10 @@ export default function Login() {
               </button>
               <br />
               <button className={Log.apple}>
-                <FaApple size={25} color='lightCoral' /> Sign In with Apple
+                <FaApple size={25}  /> Sign In with Apple
               </button>
               <br />
-              <p className={Log.para}>_________________________or________________________</p>
+              <Divider>OR</Divider>
               <br />
               <form onSubmit={handleSubmit} className={Log.Formfiled}>
                 <input
@@ -50,9 +49,8 @@ export default function Login() {
                   onChange={(e) => setLogindata(e.target.value)} className={Log.text}
                 />
                 <br />
-
               </form>
-              <button onClick={() => setShowdata(true)} className={Log.move}>Next</button>
+              <button onClick={() =>setShowdata(true)} className={Log.move}>Next</button>
               <br />
               <button className={Log.pass}>Forgot password?</button>
               <br />
@@ -77,7 +75,6 @@ export default function Login() {
               />
               <br />
               <button className={Log.anotherPage}>Login</button>
-
             </>
           )}
           <br />

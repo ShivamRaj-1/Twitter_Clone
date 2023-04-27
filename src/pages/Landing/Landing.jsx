@@ -1,15 +1,12 @@
 import React from 'react'
 import land from './Landing.module.css';
-
 import Avatar from '@mui/material/Avatar';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TagIcon from '@mui/icons-material/Tag';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-
 import GoogleBtn from '../../components/GoogleBtn/GoogleBtn';
 import AppleBtn from '../../components/AppleBtn/AppleBtn';
-
 import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
@@ -32,7 +29,7 @@ export default function Landing() {
                 <section className={land.landing_feed} >
                     <nav>
                         <h3>Explore</h3>
-                        <span><SettingsOutlinedIcon /></span>
+                        <span><SettingsOutlinedIcon/></span>
                     </nav>
 
                     <div>
@@ -97,8 +94,6 @@ export default function Landing() {
         </>
     )
 }
-
-
 
 export function LandingFooter() {
     return (
