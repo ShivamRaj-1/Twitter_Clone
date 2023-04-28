@@ -1,7 +1,7 @@
 .tweetBox{
-    padding-bottom: 10px;
-    border-bottom: 8px solid #50b7f5;
-    padding-right: 10px;
+    /* padding-bottom: 10px; */
+    border-bottom: 1px solid gray;
+    /* padding-right: 10px; */
 }
 
 .tweetBox > form {

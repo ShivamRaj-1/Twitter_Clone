@@ -1,7 +1,7 @@
 .feeds_main_container{
     padding: 10px ;
     padding-right: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
     border-bottom: 1px solid gray;
 
@@ -42,13 +42,14 @@
 
 .feeds_content_activity{
     width: 80%;
-
+    height: ;
     display: flex;
     justify-content: space-between;
 }
 .feeds_content_activity > p{
     display: flex;
     align-items: center;
+    margin: 0;
 }
 .feeds_content_activity > p > span{
     margin-left: 10px;

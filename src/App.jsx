@@ -23,8 +23,14 @@ function App() {
         <SideNavbar />
         <Home />
         <RigthSide />
+
+        {/* <Landing /> */}
+        {/* <Login /> */}
+
+
         {/* <Login />
         <SideNavbar /> */}
+
         {/* <SignUp /> */}
       </div>
       {/* <LandingFooter /> */}

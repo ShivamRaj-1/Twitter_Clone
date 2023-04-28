@@ -3,7 +3,7 @@
   background-color: #f5f8fa;
   width: 100%;
   padding:16px;
-  
+  box-sizing: border-box;
 }
 .userDataPart {
   display: flex;
