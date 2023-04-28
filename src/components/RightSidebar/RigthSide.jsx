@@ -45,7 +45,7 @@ export default function RigthSide() {
                 <ul>
                   <li style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}><span>{wid.Trending}</span><p><MoreHorizIcon /></p></li>
                   <li>{wid.name}</li>
-                  <li>{wid.Tweets}</li>
+                  <li>{wid.Tweets}</li> 
                 </ul>
               </div>
             ))}

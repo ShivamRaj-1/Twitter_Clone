@@ -1,0 +1,12 @@
+.Cross{
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.tweetBoxInput{
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+}

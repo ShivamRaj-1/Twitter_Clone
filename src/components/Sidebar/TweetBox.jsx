@@ -1,5 +1,4 @@
 import React from 'react'
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import "./TweetBox.css"
 import { Button } from '@mui/base';
 function TweetBox() {
