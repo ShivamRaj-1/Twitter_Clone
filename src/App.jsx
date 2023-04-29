@@ -7,11 +7,11 @@ function App() {
   return (
     <>
       <div className='main_background' >
-      <Landing />
+      {/* <Landing /> */}
        <Login/>
       
     </div>
-    <LandingFooter/>
+    {/* <LandingFooter/> */}
     </>
   )
 }

@@ -1,116 +1,184 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-.body1{
+.body1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background:gray;
-}
-.main{
-    position: relative;
-    width: 500px;
-    height:550px;
-    background: white;
-    border-radius: 18px;   
-}
-.container img{
-    margin-left: 10rem;
-    margin-top: 2rem;
-}
-.container h4{
-    margin-left: 8rem;
-    margin-top: 2rem;
-}
- .google{
-    border-radius: 10px;
-    width: 95%;
-    margin-left: 10px;
+    height: 100vh;
+    width:100%;
+  }
+  .main {
+    width:600px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    overflow-y: scroll;
+  }  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:15px;
+  }
+  .container h4{
+    font-weight:600;
+    font-size: 35px;
     margin-top: 20px;
-     height: 7vh; 
-     font-size: 15px;
-    cursor: pointer;
-} 
-.apple{
-    border-radius: 10px;
-    width: 95%;
-    margin-left: 10px;
-    margin-top: 20px;
-     height: 7vh; 
-     font-size: 15px;
-    cursor: pointer;
+    font-family: sans-serif;
+    color: #242424;
+  }
+  
+  .google {
+    background-color: white;
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #dedede;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
 
-}
-.Formfiled{
-    text-align: center;  
-}
-input[type=text]{
-    width: 95%;
-    border-radius:10px ;
-    font-size: 15px;
-    height: 7vh; 
-}
-.move{
-    border-radius: 10px;
-    width: 95%;
-    margin-left: 10px;
-    margin-top: 20px;
-     height: 7vh; 
-     font-size: 15px;
+  }
+  .google:hover{
+    background-color:rgb(231, 231, 253);
     cursor: pointer;
-
-}
-.pass{
-border-radius: 10px;
-width: 95%;
-margin-left: 10px;
-margin-top: 20px;
- height: 7vh; 
- font-size: 15px;
-cursor: pointer;
-}
-.span1{
-    margin-left:5rem;
+  }
+  .google a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+  }
+  .apple {
+    background-color:white;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid  #dedede;;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;
+    width:60%;
+  }
+  .apple:hover{
+    background-color:#e6e4e4;
+    cursor: pointer;
+  }
+  
+  .para {
+    font-size: 16px;
+    color: #5e5e5e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .Formfiled {
+    margin-top: 10px; 
+  }
+  .Formfiled>input{
+    padding:15px;
+    min-width:270px;
+    margin-bottom: 10px;
+    color: #5e5e5e; 
     text-align: center;
+    outline: none;
+  }
+  .Formfiled>input:hover::placeholder{
+     color:  #1da1f2;
+  }
+  .Formfiled>input:hover {
+    outline: 2px solid #1da1f2;
+  }
+  .move {
+    background-color:black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 60%;
+  }
+  .move:hover{
+    background-color: #343434;
+    cursor: pointer;
+  } 
+  
+  .pass {
+    background-color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:60%;
+    border-radius: 20px;
+    padding: 5px 12px ;
+    font-weight: 500;
+    font-size: bold;
+    
+  }
+  .pass:hover{
+    background-color:#e6e4e4; 
+    cursor: pointer;
+
+  }
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .email {
+    margin-top:10px;
+    width: 60%;
+    background-color: #e6e4e4;
+  }
+  
+  .anotherpaas {
+    margin-top: 10px;
+    width: 60%;
+    background-color:#e6e4e4 ;
+  }
+  
+  .anotherPage {
+    background-color:black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-top: 8rem;
+    width: 60%;
+  }
+  .anotherPage:hover{
+    cursor: pointer;
+    background-color:#1da1f2;
+  }
+  
+  .span1 {
+    font-size: 16px;
+    color: #5e5e5e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .span2{
+    color: #1da1f2;
+  }
+  .span2:hover{
     text-decoration: underline;
-   padding: 20px;
-}
-.para{
-    text-align: center;
-    margin-top: 5px; 
-}
-.anotherPage{
-border-radius: 10px;
-width: 95%;
-margin-left: 10px;
-margin-top:10rem;
- height: 7vh; 
- font-size: 15px;
-cursor: pointer;
-
-}
-.email{
-border-radius: 10px;
-width: 95%;
-margin-left: 20px; 
-height: 10vh; 
-font-size: 15px; 
-cursor: pointer; 
-gap: 20px;
-}
-.heading{
-    text-align: center;
-    margin-top: 20px;
-}
-.anotherpaas{
-border-radius: 20px;
-width: 95%;
-height: 10vh; 
- font-size: 15px;
-cursor: pointer;
-background-color: whitesmoke;
-}
+    color:blue;
+    cursor: pointer;
+  }
+  
