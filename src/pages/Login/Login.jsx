@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaApple } from 'react-icons/fa';
 import { FcGoogle, } from "react-icons/fc";
 import TextField from '@mui/material/TextField';
+import Divider from '@mui/material/Divider'
 import Log from './Login.module.css'
 
 export default function Login() {
@@ -10,13 +11,18 @@ export default function Login() {
   const [showdata, setShowdata] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
-    // add relevant code here
+    const matchedUser = userList.find(user => user.loginData === Logindata);
+    if (matchedUser) {
+      alert("Login successful!")
+    }
+    else {
+      alert("Invalid login data!");
+    }
   }
-
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('user'));
     setUserList(data);
-  }, []);
+  },[]);
 
   console.log(userList)
 
@@ -39,13 +45,10 @@ export default function Login() {
               </button>
               <br />
               <button className={Log.apple}>
-                <FaApple  size={20}/> Sign In with Apple
+                <FaApple size={20}/> Sign In with Apple
               </button>
-              <br />
-              <p className={Log.para}>________________or__________________</p>
-              <br />
+                <p className={Log.para}> <Divider>or</Divider></p>
               <form onSubmit={handleSubmit} className={Log.Formfiled}>
-                                
                 <input
                   type='text'
                   value={Logindata}
@@ -53,7 +56,6 @@ export default function Login() {
                   onChange={(e) => setLogindata(e.target.value)}
                 /> 
                 <br />
-
               </form>
               <button onClick={() => setShowdata(true)} className={Log.move}>Next</button>
               <br />
