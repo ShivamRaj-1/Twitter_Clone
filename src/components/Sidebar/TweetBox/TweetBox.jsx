@@ -9,7 +9,6 @@ function TweetBox() {
   const [userTweet, setuserTweet] = useState('')
 
   const [atomRerender, setAtomRerender]=useRecoilState(reRender)
-
   function handleTweetClick() {
     const newTweet = {
       'content': userTweet,
@@ -21,16 +20,14 @@ function TweetBox() {
 
 
     const oldTweetList = JSON.parse(localStorage.getItem('userTweetList'))
-
     if(oldTweetList){
       localStorage.setItem('userTweetList', JSON.stringify([newTweet, ...oldTweetList ]) )
     }
     else{
       localStorage.setItem('userTweetList', JSON.stringify([newTweet]) )
     }
-    
-    setuserTweet('')
-    
+  
+    setuserTweet('')    
     setAtomRerender(!atomRerender)
   }
 
@@ -54,5 +51,4 @@ function TweetBox() {
     </div>
   )
 }
-
 export default TweetBox

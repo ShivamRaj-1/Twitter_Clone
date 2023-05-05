@@ -160,7 +160,6 @@ export default function Feeds({ show }) {
                         }
                     </div>
                 )
-
             }
 
             <button

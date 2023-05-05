@@ -1,7 +1,6 @@
 import React from 'react'
 import land from './Landing.module.css';
 import SignUp from '../RegistrationPage/SignUp';
-
 import Avatar from '@mui/material/Avatar';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TagIcon from '@mui/icons-material/Tag';
@@ -103,8 +102,6 @@ export default function Landing() {
         </>
     )
 }
-
-
 
 export function LandingFooter() {
     return (

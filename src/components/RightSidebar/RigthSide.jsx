@@ -4,7 +4,6 @@ import RightLast from './RightLast/RightLast';
 import SearchBar from './SearchBar/SearchBar';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import WhoToFollow from './WhoToFollow/WhoToFollow';
-
 export default function RightSide() {
   const [notInterested, setNotInterested] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -18,7 +17,7 @@ export default function RightSide() {
     },
     {
       id: 2,
-      Trending: "Business and finance Trending",
+      Trending: "Trending in Business",
       name: "#InvestigateAGIgreenpac",
       Tweets: "2,014 Tweets"
     },
@@ -39,7 +38,6 @@ export default function RightSide() {
   const handleNotInterested = (id) => {
     setNotInterested([...notInterested, id]);
   };
-
   const filteredData = data.filter((item) => !notInterested.includes(item.id));
 
   return (
@@ -48,7 +46,7 @@ export default function RightSide() {
         <SearchBar />
         <section className={Right.firstComp}>
           <div className={Right.firstcontainer}>
-            <h2>Whats Happening</h2>
+            <h2>What's Happening</h2>
           </div>
           <div className={Right.datapart}>
             {filteredData.map((wid, ind) => (
@@ -56,7 +54,7 @@ export default function RightSide() {
                 <ul>
                   <li style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <span>{wid.Trending}</span>
-                    <p><MoreHorizIcon onClick={() => setSelectedItem(ind)} /></p>
+                    <p><MoreHorizIcon onClick={()=>setSelectedItem(ind)} /></p>
                     <div>
                       {selectedItem === ind && (
                         <span onClick={() => handleNotInterested(wid.id)} className={Right.not_intrested}>Not interested</span>

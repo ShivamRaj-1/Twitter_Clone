@@ -257,8 +257,6 @@ export default function SignUp(){
                   </FormControl>
                 </Box>
               </div>
-
-
               <div >
                 <Box sx={{ minWidth: 120 }}>
                   <FormControl fullWidth>
