@@ -34,9 +34,7 @@ export default function FormDialog({ open, handleClose }) {
     setuserTweet('')
     handleClose()
     setAtomRerender(!atomRerender)
-
   }
-
   return (
     <div>
       <Dialog open={open} onClose={handleClose}>

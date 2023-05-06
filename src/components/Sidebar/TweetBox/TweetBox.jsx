@@ -17,8 +17,6 @@ function TweetBox() {
       "reTweetsCount": 0,
       "isLiked": false
     }
-
-
     const oldTweetList = JSON.parse(localStorage.getItem('userTweetList'))
     if(oldTweetList){
       localStorage.setItem('userTweetList', JSON.stringify([newTweet, ...oldTweetList ]) )
@@ -43,11 +41,9 @@ function TweetBox() {
                     value={userTweet}
                     onChange={(e)=> setuserTweet(e.target.value) }
                 />
-
                 <Button onClick={handleTweetClick} className="tweetBox_tweetButton">Tweet</Button>
             </div>
         </form>
-
     </div>
   )
 }
