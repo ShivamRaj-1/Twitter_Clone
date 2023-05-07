@@ -21,9 +21,7 @@ export default function Login() {
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('userData'));
     setUserList(data);
-
     localStorage.setItem('isUserLoggedIn', JSON.stringify(false))
-
   }, []);
 
   console.log(userList)
@@ -39,10 +37,8 @@ export default function Login() {
       setShowdata(true)
     }
   }
-
   function handlePassSubmit(e) {
     e.preventDefault();
-
     const matchedUserPass = userList.find(user => user.password === userPass)
     if (!matchedUserPass) {
       alert('Password not matched!')
@@ -53,9 +49,7 @@ export default function Login() {
       // setUserLoggedIn(true)
       localStorage.setItem('isUserLoggedIn', JSON.stringify(true)) 
 
-
       const curUser = JSON.parse(localStorage.getItem('userData')).filter(user => user.email === Logindata);
-
       localStorage.setItem('currentUser', JSON.stringify(...curUser));
       // console.log(curUser);
       navigate('/')
@@ -94,8 +88,6 @@ export default function Login() {
                   onChange={(e) => setLogindata(e.target.value)} className={Log.text}
                 />
                 <br />
-
-
                 <button type='submit' className={Log.move}>Next</button>
                 <br />
               </form>
@@ -130,7 +122,6 @@ export default function Login() {
             </>
           )}
           <br />
-
           <Link to='/signup'><span className={Log.span1}>Do you have an account? Sign Up</span></Link>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import land from './Landing.module.css';
+
 import Signup from '../SignUp/Signup'
+
 
 import Avatar from '@mui/material/Avatar';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -103,8 +105,6 @@ export default function Landing() {
         </>
     )
 }
-
-
 
 export function LandingFooter() {
     return (

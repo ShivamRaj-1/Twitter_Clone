@@ -242,8 +242,6 @@ const oldData = JSON.parse(localStorage.getItem("userData")) || []
                   </FormControl>
                 </Box>
               </div>
-
-
               <div >
                 <Box sx={{ minWidth: 120 }}>
                   <FormControl fullWidth>

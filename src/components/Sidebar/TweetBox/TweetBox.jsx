@@ -8,6 +8,7 @@ function TweetBox() {
 
   const [userTweet, setuserTweet] = useState('')
 
+
   const [atomRerender, setAtomRerender] = useRecoilState(reRender)
 
   function handleTweetClick() {
@@ -40,6 +41,7 @@ function TweetBox() {
 
   return (
     <div className='tweetBox'>
+
       <form >
         <div className='tweetBox_input'>
           <img src="https://img.freepik.com/premium-vector/businessman-avatar-cartoon-character-profile_18591-50581.jpg" />
@@ -55,8 +57,8 @@ function TweetBox() {
         </div>
       </form>
 
+
     </div>
   )
 }
-
 export default TweetBox
