@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-// import { TimePickerToolbar } from '@mui/x-date-pickers-pro';
 import ClearIcon from "@mui/icons-material/Clear";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-// import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from "@mui/material/DialogTitle";
 import { useNavigate } from "react-router-dom";
 import FormControl from '@mui/material/FormControl';
@@ -23,26 +21,21 @@ import { useSetRecoilState } from "recoil";
 
 export default function SignUp(){
   const [open, setOpen] =useState(true);
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [error, setError] = useState(false)
   const [errortxt, setErrorTxt] = useState("")
-
-  // const[users,setUsers]=useState([])
   const navigate = useNavigate()
-  const oldData = JSON.parse(localStorage.getItem("userData")) || []
-
+  // const oldData = JSON.parse(localStorage.getItem("userData")) || []
   const setAtomUserDetails = useSetRecoilState(userDetails)
-
   const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   const pattern1=/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).*$/;
 
   function isEmail(str) {
     return str.match(pattern);
   }
+
   function isPassword(str1){
     return str1.match(pattern1)
   }
@@ -51,7 +44,7 @@ export default function SignUp(){
     if (name === "" || email === "" || password === "") {
       setError(true)
       setErrorTxt("Please fill the all detail")
-    } else if (name.length < 3) {
+    } else if (name.length < 4) {
       setError(true)
       setErrorTxt("*Name should be atlest 3 characters")
     } else if (isEmail(email) === null) {
@@ -64,9 +57,7 @@ export default function SignUp(){
     else if (oldData.find((val) => val.email === email)) {
       setError(true)
       setErrorTxt(`${email} already exists`)
-      //   setName("")
-      // setEmail("")
-      // setPassword("")
+    
     }
     else {
       setError(false)
@@ -75,7 +66,7 @@ export default function SignUp(){
       setEmail("")
       setPassword("")
 
-
+const oldData = JSON.parse(localStorage.getItem("userData")) || []
       const newUser = {
         name: name,
         email: email,
@@ -160,13 +151,7 @@ export default function SignUp(){
               value={email}
             />
 
-            {/* <TextField
-             sx={{ marginTop: "1rem" ,padding:"0.5rem"}}
-            id="outlined-basic"
-            label="Phone"
-            variant="outlined"
-          /> */}
-
+         
             <TextField
               sx={{ marginTop: "1rem", padding: "0.5rem", width: "88%" }}
               id="outlined-basic"
@@ -186,9 +171,9 @@ export default function SignUp(){
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      // value={Month}
+                      
                       label="Month"
-                      // onChange={handleChange}
+                      
                       MenuProps={{
                         anchorOrigin: {
                           vertical: "top",
@@ -211,7 +196,7 @@ export default function SignUp(){
                       {months.map((month, index) => {
                         return <MenuItem
                           key={Math.random() * 10000} value={index}>{month}</MenuItem>;
-                        // sx:{{ py: 0, fontSize: '0.9rem' }}
+                       
                       })}
 
                     </Select>
@@ -226,9 +211,9 @@ export default function SignUp(){
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      // value={Day}
+                  
                       label="Day"
-                      // onChange={handleChange}
+                     
                       MenuProps={{
                         anchorOrigin: {
                           vertical: "top",
@@ -264,9 +249,9 @@ export default function SignUp(){
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      // value={Year}
+                     
                       label="Year"
-                      // onChange={handleChange}
+               
                       MenuProps={{
                         anchorOrigin: {
                           vertical: "top",
@@ -297,7 +282,7 @@ export default function SignUp(){
             </div>
 
             {error ? <small style={{ color: "red" }}>{errortxt}</small> : null}
-            {/* {error && <p>{error}</p>} */}
+            
             <Button
               sx={{ marginTop: "1rem", padding: "0.5rem" }}
               variant="contained"
@@ -316,4 +301,5 @@ export default function SignUp(){
     </div>
   );
 };
+
 
