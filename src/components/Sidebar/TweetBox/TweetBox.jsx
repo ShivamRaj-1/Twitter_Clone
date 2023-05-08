@@ -25,16 +25,12 @@ function TweetBox() {
       likeCount: 0,
       commentCount: 0,
       reTweetsCount: 0,
-      isLiked: false,
     };
 
     const oldTweetList = JSON.parse(localStorage.getItem("userTweetList"));
 
     if (oldTweetList) {
-      localStorage.setItem(
-        "userTweetList",
-        JSON.stringify([newTweet, ...oldTweetList])
-      );
+      localStorage.setItem("userTweetList", JSON.stringify([newTweet, ...oldTweetList]));
     } else {
       localStorage.setItem("userTweetList", JSON.stringify([newTweet]));
     }

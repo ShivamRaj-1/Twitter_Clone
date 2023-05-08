@@ -44,7 +44,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* tweetbox coming form sidebar component */}
         <TweetBox />
+        
         <Feeds show={showHome} />
       </div>
       <RigthSide />

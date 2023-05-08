@@ -10,7 +10,7 @@ import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 
 import { useRecoilState } from 'recoil';
-import {reRender} from '../../atoms/reRender'
+import {reRender} from '../../atoms/reRender' 
 
 
 export default function Feeds({ show }) {
@@ -26,7 +26,7 @@ export default function Feeds({ show }) {
             setAtomRerender(!atomRerender)
         } else {
             elem['isLiked'] = true;
-            elem['likeCount'] = (elem.likeCount || 0) + 1
+            elem['likeCount'] = elem.likeCount  + 1
             setAtomRerender(!atomRerender)
         }
 
@@ -40,7 +40,7 @@ export default function Feeds({ show }) {
           setAtomRerender(!atomRerender)
         } else {
           elem["isCommented"] = true;
-          elem["commentCount"] = (elem.commentCount || 0 ) + 1;
+          elem["commentCount"] = elem.commentCount  + 1;
           setAtomRerender(!atomRerender)
         }
         // console.log(elem.isCommented);
@@ -53,7 +53,7 @@ export default function Feeds({ show }) {
           setAtomRerender(!atomRerender)
         } else {
           elem["isShared"] = true;
-          elem["reTweetsCount"] = (elem.reTweetsCount || 0) + 1;
+          elem["reTweetsCount"] = elem.reTweetsCount  + 1;
           setAtomRerender(!atomRerender)
         }
         // console.log(elem.isShared);
@@ -89,10 +89,6 @@ export default function Feeds({ show }) {
                                                     <div className='feeds_content_body' >
                                                         <p>{elem.content}</p>
                                                     </div>
-
-                                                    {/* <div className='feeds_content_imgDiv' >
-                                                    <img src={elem.image} alt="" />
-                                                </div> */}
 
                                                     <div className='feeds_content_activity' >
                                                         <p><ChatBubbleOutlineOutlinedIcon /><span>{elem.commentCount}</span></p>
