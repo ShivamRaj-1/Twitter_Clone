@@ -4,7 +4,7 @@
     /* padding-right: 10px; */
 }
 
-.tweetBox > form {
+.tweetBox  form {
     display: flex;
     flex-direction: column;
 }
@@ -13,9 +13,13 @@
     padding: 20px;
     display: flex;
     align-items: center;
+
+}
+.tweetBox_input > div{
+    width: 90%;
 }
 
-.tweetBox_input > textarea {
+.tweetBox_input  textarea {
     margin-left: 20px;
     font-size: 20px;
     border: none;
@@ -26,13 +30,23 @@
 textarea::-webkit-scrollbar{
     display: none;
 }
-.tweetBox_input > textarea::placeholder {
+.tweetBox_input  textarea::placeholder {
     color: #1c3242;
     font-size: 1.2em;
     font-style: italic;
     
    
   }
+
+.Main-tweet{
+    display: flex;
+    align-items: center;
+}
+.tweet-conte{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
 
 .tweetBox_tweetButton{
     background-color: #50b7f5 !important;
@@ -47,7 +61,8 @@ textarea::-webkit-scrollbar{
     margin-left: auto !important;
 }
 
-.tweetBox_input > img{
+.tweetBox_input  img{
+    
     height: 50px;
     width: 50px;
 }

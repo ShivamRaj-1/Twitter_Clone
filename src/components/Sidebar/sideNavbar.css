@@ -3,7 +3,7 @@
 
     /* min-width: 250px; */
 
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: 0px;
     width: 20%;
     
@@ -19,16 +19,16 @@
     display: none;
 }
 
-.sidebar > div{
+/* .sidebar > div{ */
     /* position: fixed; */
-}
+/* } */
 
 
 .sidebar_twitterIcon{
     color: #50b7f5;
     font-size: 30px  !important;    
-    margin: 10px 20px;
-    margin-bottom: 20px;
+    margin: 10px 10px;
+    margin-bottom: 5px;
 }
 
 .sidebar_tweet{

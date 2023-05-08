@@ -1,6 +1,7 @@
 .Cross{
     padding-left: 20px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .tweetBoxInput{
@@ -10,3 +11,14 @@
     outline: none;
     width: 100%;
 }
+
+.tweet-icons{
+    margin-top: 5px;
+    display: flex;
+    gap: 8px;
+}
+
+/* .textArea {
+    width: 90%;
+} */
+

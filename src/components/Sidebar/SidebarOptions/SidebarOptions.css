@@ -7,6 +7,7 @@
     text-decoration: none;
 }
 
+
 .sidebarOptions > a:hover{
     background-color: #e8f5fe;
     border-radius: 42px;
@@ -22,11 +23,11 @@
     /* padding: 15px;
     font-size: 30px; */
     padding: 20px;
-    font-size: 70px;
+    font-size: 60px;
 }
 
 .sidebarOptions > a > h2 {
-    font-weight: 800;
+    font-weight: 750;
     font-size: 20px;
     margin-right: 20px;
     
