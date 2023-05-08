@@ -1,15 +1,14 @@
-
 import React, { useState } from 'react';
 import Who from './WhoToFollow.module.css'
 function WhoToFollow() {
   const [users, setUsers] = useState([
     {
       image: "https://pbs.twimg.com/profile_images/1559375475557818368/ub-ZdXDD_400x400.jpg",
-      name: 'Chennai super King', username: 'ChennaiIpl', following: false
+      name: 'Chennai  King', username: 'ChennaiIpl', following: false
     },
     {
-      image: " https://assets.allpngfree.com/storage/thumbnails/samajwadi-party-akhilesh-yadav-hd-photo-png-download--thumbnail-1656521917.jpg",
-      name: 'Akhiles Yadav', username: 'yadavakhilesh', following: false
+      image: " https://pbs.twimg.com/profile_images/1585268468336558081/LmSiX43V_400x400.jpg",
+      name: 'Mr.Yogi', username: 'yogi', following: false
     },
     {
       image: "https://www.indiaonlinepages.com/sports/gifs/sachin-tendulkar.jpg", name: 'Sachin Tendulakr'
@@ -57,5 +56,4 @@ function WhoToFollow() {
     </div>
   );
 }
-
 export default WhoToFollow;

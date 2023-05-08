@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './UserLogout.css'
-
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -12,18 +11,11 @@ import Tooltip from '@mui/material/Tooltip';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 import { useNavigate } from 'react-router-dom';
-import { userDetails } from '../../../atoms/userDetails';
-import { useRecoilValue } from 'recoil';
-
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
   const navigate = useNavigate()
-
-  const atomUserDetails = useRecoilValue(userDetails)
-
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -35,7 +27,7 @@ export default function AccountMenu() {
     navigate('/login')
   }
 
-  console.log(atomUserDetails);
+ 
 
   return (
     <React.Fragment>

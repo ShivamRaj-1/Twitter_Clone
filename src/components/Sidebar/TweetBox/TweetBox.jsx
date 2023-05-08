@@ -60,6 +60,7 @@ function TweetBox() {
           />
 
 
+
           <TweetOptions />
 
           <hr />
@@ -74,6 +75,7 @@ function TweetBox() {
               <LocationOnIcon />
             </div>
 
+
             <Button onClick={handleTweetClick} className="tweetBox_tweetButton">
               Tweet
             </Button>
@@ -85,4 +87,6 @@ function TweetBox() {
   );
 }
 
+
 export default TweetBox;
+

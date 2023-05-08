@@ -1,9 +1,9 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
+
 
 import CropOriginalIcon from "@mui/icons-material/CropOriginal";
 import GifBoxIcon from "@mui/icons-material/GifBox";
@@ -15,6 +15,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 import { reRender } from "../../../atoms/reRender";
 import { useRecoilState } from "recoil";
+
 
 import "./TweetDialogue.css";
 
@@ -48,8 +49,8 @@ export default function FormDialog({ open, handleClose }) {
     setuserTweet("");
     handleClose();
     setAtomRerender(!atomRerender);
-  }
 
+  }
   return (
     <div >
       <Dialog open={open} onClose={handleClose}  >

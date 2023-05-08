@@ -1,6 +1,8 @@
 import React from 'react'
 import land from './Landing.module.css';
-import SignUp from '../RegistrationPage/SignUp';
+
+import Signup from '../SignUp/Signup'
+
 
 import Avatar from '@mui/material/Avatar';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -104,8 +106,6 @@ export default function Landing() {
     )
 }
 
-
-
 export function LandingFooter() {
     return (
         
@@ -116,7 +116,7 @@ export function LandingFooter() {
             </div>
             <div>
                 <Link to='/login'><button className={land.login_btn}>Log in</button></Link>
-                <Link to='/signup'><SignUp/></Link>
+                <Link to='/signup'><Signup/></Link>
             </div>
         </ section >
 
