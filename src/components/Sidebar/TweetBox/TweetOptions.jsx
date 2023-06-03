@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './tweetOptions.css'
+import './TweetOptions.css'
 
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
