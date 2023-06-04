@@ -15,8 +15,6 @@ export default function Home() {
   const [showHome, setShowHome] = useState(true)
   const navigate = useNavigate()
 
-  // const userLoggedIn = useRecoilValue(isUserLoggedIn)
-
 
   useEffect(() => {
     if (!JSON.parse(localStorage.getItem('isUserLoggedIn'))) {
